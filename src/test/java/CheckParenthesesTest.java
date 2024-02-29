@@ -38,19 +38,15 @@ class CheckParenthesesTest {
 
     @org.junit.jupiter.api.Test
     void checkValidParentheses() {
-
         String[] validBracketArray = new String[]{brackets1, brackets2, brackets5, brackets6};
         String[] invalidBracketArray = new String[]{brackets3, brackets4, brackets7};
 
         for (String bracketString: validBracketArray) {
-
-            assertTrue(CheckParentheses.checkValidParentheses(bracketString));
-
+            assertTrue(BracketValidator.checkValidParentheses(bracketString));
         }
 
         for (String bracketString: invalidBracketArray) {
-
-            assertFalse(CheckParentheses.checkValidParentheses(bracketString));
+            assertFalse(BracketValidator.checkValidParentheses(bracketString));
 
         }
 
